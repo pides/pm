@@ -1,0 +1,307 @@
+*{
+     margin: 0;
+     padding: 0;
+ }
+html,body{
+    height:100%;
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+}
+a,a:hover,a:link{
+    text-decoration: none;
+}
+button {
+    padding: 0;
+    margin: 0;
+    outline:none;
+}
+button:focus,button:active{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline:none;
+}
+
+div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
+
+.hr{
+    border-top:1px solid rgb(30,32,38);
+    border-bottom:1px solid rgb(58,60,68);
+}
+.flr-right{
+    float: right;
+}
+#container{
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 400px;
+    height: 100%;
+    position: relative;
+}
+#nav{
+    width: 60px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(47,49,58);
+    height: 100%;
+}
+
+#nav a{
+    display: inline-block;
+    text-align: center;
+    line-height: 60px;
+    width: 60px;
+    font-size: 15px;
+    color:#6D7287;
+    -webkit-transition:color 0.2s ease;
+    -moz-transition:color 0.2s ease;
+    -o-transition:color 0.2s ease;
+    transition:color 0.2s ease;
+}
+#nav a.search{
+    background-color: rgb(102,151,251);
+    color:#fff;
+}
+#nav a:hover{
+    color:#fff;
+}
+#nav a.active{
+    color:#fff;
+    border-left: 5px solid rgb(102,151,251);
+    width: 55px;
+
+}
+
+#nav .user{
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+}
+#nav .user img{
+    width: 60px;
+    padding:10px;
+    cursor: pointer;
+}
+#nav .user .badge{
+    text-align: center;
+    height: 15px;
+    background-color: red;
+    padding: 2px 4px;
+    text-shadow: none;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 40px;
+    left:35px;
+}
+#container .window{
+    width: 100%;
+    margin-left: 60px;
+}
+#container .window .iframe{
+    background-color: rgb(235,237,243);
+    position: absolute;
+    left:60px;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+#container .window .iframe .header{
+    height:60px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    z-index: 233;
+}
+#container .window .iframe .header .title{
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 130px;
+    display: inline-block;
+    float: left;
+}
+
+#container .window .iframe .header .tab-list{
+    display: inline-block;
+    height:60px;
+    float: left;
+
+}
+#container .window .iframe .header .tab-list ul{
+    display: inline-block;
+    margin: 0;
+    padding:0;
+}
+#container .window .iframe .header .tab-list ul li.item{
+    display: inline-block;
+    line-height: 45px;
+    margin-top: 15px;
+    min-width: 120px;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#container .window .iframe .header .tab-list ul li.item span{
+    font-size: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    height: 45px;
+    display: inline-block;
+    float: left;
+
+
+    cursor: pointer;
+}
+#container .window .iframe .header .tab-list ul li.item span label{
+    cursor: pointer;
+    -webkit-transition:color 0.2s ease;
+    -moz-transition:color 0.2s ease;
+    -o-transition:color 0.2s ease;
+    transition:color 0.2s ease;
+    color: #6D7287;
+
+}
+#container .window .iframe .header .tab-list ul li.item .tri{
+    display: none;
+}
+#container .window .iframe .header .tab-list ul li.item .pic-remove{
+    position: absolute;
+    right: 20px;
+    top:14px;
+    color: #000;
+}
+#container .window .iframe .header .tab-list ul li.item span label:hover{
+    color: rgb(98, 151, 248);
+}
+#container .window .iframe .header .tab-list ul li.active{
+    border-bottom: 2px solid #EBEDF3;
+}
+#container .window .iframe .header .tab-list ul li.active span{
+    background-color: #EBEDF3;
+    border-radius: 4px;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
+    min-width: 100px;
+}
+#container .window .iframe .header .tab-list ul li.active span label{
+    color: rgb(98, 151, 248);
+}
+#container .window .iframe .header .tab-list ul li.active .tri{
+    width: 0;
+    height: 0;float: left;
+    border-right: 20px solid transparent;
+    border-bottom: 45px solid #EBEDF3;
+    display: inline-block;
+
+}
+#container .window .iframe .header .tab-list .btn-group{
+    right: 0;
+    position: absolute;
+    top:0;
+}
+#container .window .iframe .header .tab-list button{
+    border: 0;
+    width: 60px;
+    height:60px;
+    color: #fff;
+    background-color: rgb(98, 151, 248);
+}
+
+#container .window .iframe .menu{
+    width: 140px;
+    float: left;
+}
+#container .window .iframe .menu ul{
+    margin-top: 20px;
+
+}
+#container .window .iframe .menu ul li{
+    padding: 10px 35px;
+}
+
+#container .window .iframe .menu ul li a{
+    color: #6D7287;
+    -webkit-transition:color 0.2s ease;
+    -moz-transition:color 0.2s ease;
+    -o-transition:color 0.2s ease;
+    transition:color 0.2s ease;
+}
+
+#container .window .iframe .menu ul li:hover a,#container .window .iframe .menu ul li.active a{
+    color: #000;
+}
+
+#container .window .iframe .content-list .content{
+    position: absolute;
+    left:140px;
+    top:80px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border: 1px solid #D2D4DB;
+
+}
+
+/* content */
+.list .top{
+    height:50px;
+    width: 100%;
+    background-color: #EFF0F4;
+    border-bottom: 1px solid #D2D4DB;
+    border-top: 1px solid #fff;
+}
+
+.list .top label{
+    line-height: 49px;
+    margin-left: 20px;
+}
+
+.list .top button{
+    border:0;
+    background-color: transparent;
+    border-left: 1px solid #D2D4DB;
+    width: 50px;
+    line-height: 49px;
+    font-size: 15px;
+    float: left;
+    color: #414554;
+    -webkit-transition:color 0.2s ease;
+    -moz-transition:color 0.2s ease;
+    -o-transition:color 0.2s ease;
+    transition:color 0.2s ease;
+}
+.list .top button:hover{
+    color: #000;
+}
+.list .top ul{
+    height:49px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.list .panel{
+    margin:0;
+    border:0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #EFF0F4;
+    height:0;
+}
+.list .panel .panel-body{
+    padding: 0;
+}
