@@ -61,16 +61,33 @@
             <div class="header">
                 <span class="title">用户中心</span>
                 <div class="tab-list">
-                    <ul>
-                        <li class="item active"><span><label>全部用户</label></span><i class="tri"></i></li>
-                        <li class="item "><span><label>全部用户</label></span><i class="tri"></i></li>
-                        <li class="item "><span><label>全部用户</label></span><i class="tri"></i></li>
-                        <li class="item "><span><label>全部用户</label></span><i class="tri"></i></li>
-                        <li class="item "><span><label>全部用户</label></span><i class="tri"></i></li>
+                    <ul class="tab-slide">
+                        <li class="item active"><span><label>全部用户111111111111111</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户2</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户3</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户4</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户5</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户6</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户7</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户8</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户9</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户10</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户11</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户12</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户13</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户14</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户15</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户16</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户17</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户18</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户19</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户19</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户19</label></span><i class="tri"></i></li>
+                        <li class="item "><span><label>全部用户19</label></span><i class="tri"></i></li>
                     </ul>
-                    <div class="btn-group flr-right">
-                        <button><i class="pic-plus"></i></button>
-                    </div>
+                    <!--<div class="btn-group flr-right">-->
+                        <!--<button><i class="pic-plus"></i></button>-->
+                    <!--</div>-->
                 </div>
             </div>
             <div class="menu">
@@ -137,8 +154,13 @@
         </div>
     </div>
 </div>
+<div class="contextmenu" id="top_cmune" data-options="tabContextmenu">
+    <div data-options="delThis">关闭标签</div>
+    <div data-options="delRight">关闭右侧标签</div>
+    <div data-options="delOther">关闭其他标签</div>
+    <div data-options="delAll">关闭所有标签</div>
+</div>
 <script>
-
     /*PP.Nav.init([
         {
             cls:PP.Nav.activeCls,

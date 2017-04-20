@@ -118,7 +118,6 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
 #container .window .iframe .header{
     height:60px;
     background-color: #fff;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     z-index: 233;
 }
 #container .window .iframe .header .title{
@@ -133,21 +132,27 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
 
 #container .window .iframe .header .tab-list{
     display: inline-block;
+    overflow:hidden;
+    width: calc(100% - 130px);
     height:60px;
     float: left;
-
 }
+
 #container .window .iframe .header .tab-list ul{
-    display: inline-block;
     margin: 0;
     padding:0;
+    position: relative;
+    min-width: 300px;
+    white-space: nowrap;
+    display: inline-block;
+    height: 100%;
 }
 #container .window .iframe .header .tab-list ul li.item{
     display: inline-block;
     line-height: 45px;
     margin-top: 15px;
     min-width: 120px;
-    float: left;
+    /*float: left;*/
     position: relative;
     margin-left: 10px;
     cursor: pointer;
@@ -170,7 +175,8 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
     -o-transition:color 0.2s ease;
     transition:color 0.2s ease;
     color: #6D7287;
-
+    width: 120px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
 }
 #container .window .iframe .header .tab-list ul li.item .tri{
     display: none;
@@ -250,9 +256,9 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
     right: 20px;
     bottom: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
     overflow: hidden;
     border: 1px solid #D2D4DB;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
 
 }
 
@@ -304,4 +310,29 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
 }
 .list .panel .panel-body{
     padding: 0;
+}
+.contextmenu {
+    position: absolute;
+    z-index: 9999;
+    background: #fff;
+    display: none;
+    border: solid 1px #e8e8e8;
+    width: 180px;
+    height: auto;
+}
+.contextmenu > div {
+    font-size: 14px;
+    padding-left: 3%;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+.line {
+    box-sizing: border-box;
+    background: #d2d4db;
+    height: 1px;
+}
+.cmactive {
+    background: #e8e8e8;
+    color:#fff;
 }
