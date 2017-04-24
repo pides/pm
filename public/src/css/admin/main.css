@@ -133,9 +133,34 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
 #container .window .iframe .header .tab-list{
     display: inline-block;
     overflow:hidden;
-    width: calc(100% - 130px);
+    width: calc(100% - 230px);
     height:60px;
     float: left;
+}
+
+#container .window .iframe .header .btn-form{
+    width: 100px;
+    height: 100%;
+    float: left;
+    color: #6D7287;
+}
+
+#container .window .iframe .header .btn-form div {
+    box-sizing: border-box;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    width: 50%;
+    height: 50px;
+}
+
+.btn-form .btn-left {
+    float: left;
+}
+
+.btn-form .btn-right {
+    float: right;
 }
 
 #container .window .iframe .header .tab-list ul{
@@ -147,12 +172,12 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
     display: inline-block;
     height: 100%;
 }
+
 #container .window .iframe .header .tab-list ul li.item{
     display: inline-block;
     line-height: 45px;
     margin-top: 15px;
     min-width: 120px;
-    /*float: left;*/
     position: relative;
     margin-left: 10px;
     cursor: pointer;
@@ -335,4 +360,8 @@ div,ul,li,ol,li,p {margin:0; padding:0;list-style: none}
 .cmactive {
     background: #e8e8e8;
     color:#fff;
+}
+.tbactive {
+    background: rgb(102,151,251);
+    color: #ffffff;
 }

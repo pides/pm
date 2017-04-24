@@ -37,6 +37,7 @@ $(function () {
     PP.Window = {
         list: [],
         cMenuEl: null,
+        TagBtn: null,
         init: function () {
             PP.Window.el = $('#window');
         },
@@ -50,11 +51,16 @@ $(function () {
                 "<div class='header'>" +
                 "<span class='title'>" + data.title + "</span>" +
                 "<div class='tab-list'>" +
-                "<ul></ul>" +
+                "<ul class='tab-slide'></ul>" +
                 // "<div class='btn-group flr-right'>" +
                 // "<button><i class='pic-plus'></i></button>" +
                 // "</div>" +
-                "</div></div>" +
+                "</div>" +
+                "<div class='btn-form'>" +
+                "<div class='pic-angle-left btn-left' data-id='left'></div>" +
+                "<div class='pic-angle-right btn-right' data-id='right'></div>" +
+                "</div>" +
+                "</div>" +
                 "<div class='menu'><ul>" + menuList + "</ul></div>" +
                 "<div class='content-list' ><div class='content' style='text-align: center'><h2>欢迎进入" + data.title + "</h2></div></div>" +
                 "</div>";
@@ -103,6 +109,7 @@ $(function () {
             contentList.find("iframe").hide();
             tabchild = $(tabchild);
             tabList.append(tabchild);
+            if(tabchild.index() === 0) tabchild.addClass('tagSign');
             contentList.append(contentchild);
             if(contentList.find("iframe").length > 0) contentList.find("h2").hide();
             tabchild.on({
@@ -189,6 +196,7 @@ $(function () {
         });
         PP.Window.init();
         PP.Nav.init();
+        PP.Window.TagBtn = new TagBtn();
     });
 
     function CMenu(cfg) {
@@ -238,17 +246,47 @@ $(function () {
         this.el.css({"top": e.pageY, "left": e.pageX}).show();
     };
 
-});
-
-var w = 0;
-$(window).on({
-    'click': function(){
-        w = w + 159;
-        $('.tab-slide').css('right', w +'px')
-    },
-    'contextmenu': function(){
-        w = w - 159;
-        $('.tab-slide').css('right', w + 'px')
+    function TagBtn(){
+        var $this = this, activeCls = 'tbactive';
+        var bf = $('.btn-form');
+        this.id = null;
+        this.parent = null;
+        this.tablist = null;
+        this.ul = null;
+        this.tagNum = null;
+        bf.find('div').on({
+            'mousemove': function(){
+                $(this).addClass(activeCls);
+            },
+            'mouseout': function(){
+                $(this).removeClass(activeCls);
+            },
+            'click': function(){
+                $this.tagMove($(this));
+            }
+        });
     }
-})
-//Tagslide
+    TagBtn.prototype.tagMove = function (target){
+        if(!target) return;
+        this.id = target.data('id');
+        this.parent = target.parent();
+        this.tablist = this.parent.prev('.tab-list');
+        this.ul = this.tablist.find(".tab-slide");
+        this.tagNum = this.ul.children().length;
+        this.ts = this.ul.find('.tagSign');
+        var tsi = this.ts.index();
+        switch (this.id){
+            case 'right':
+                if((this.tagNum -1) == tsi) return;
+                this.ts.removeClass('tagSign').hide();
+                this.ts.next().addClass('tagSign');
+                break;
+            case 'left':
+                if(tsi == 0) return;
+                this.ts.removeClass('tagSign');
+                this.ts.prev().show().addClass('tagSign');
+                break;
+        }
+    }
+
+});
